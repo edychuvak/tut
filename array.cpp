@@ -4,8 +4,15 @@ Array::Array(size_t size){
   mySize = size;
   myData = new int [mySize];
 };
+Array::Array(Array &a){
+  mySize = a.mySize;
+  myData = new int [mySize];
+  for(int i =0;i<mySize;i++){
+  	myData[i]=a.myData[i];
+  }
+};
 Array::~Array(){
-	delete [] myData;
+  delete [] myData;
 };
 void Array::set(int i,int val){
 	if(i<0 || i>(mySize-1)){

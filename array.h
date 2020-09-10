@@ -10,6 +10,7 @@ private:
 	int *myData;	
 public:
 	Array(size_t size);
+	Array(Array &a);
 	~Array();
 	void set(int i,int val);
 	int get(int i); 
