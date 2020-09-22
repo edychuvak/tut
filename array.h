@@ -15,6 +15,6 @@ public:
 	void set(int i,int val);
 	int get(int i); 
     size_t getSize();
-
+    Array& operator=(Array &a);
 };
 # endif

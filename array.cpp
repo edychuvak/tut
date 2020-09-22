@@ -30,3 +30,15 @@ size_t Array::getSize(){
 	return mySize;
 
 };
+Array& Array::operator=(Array &a){
+	if(this!=&a){
+	delete [] myData;
+	mySize = a.mySize;
+	myData = new int[mySize];
+	for (int i = 0; i < mySize; ++i)
+	{
+		myData[i]=a.myData[i];
+	}
+    }
+    return *this;
+};
